@@ -1,3 +1,9 @@
+
+<?php
+
+
+
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -31,7 +37,7 @@
 
         <ul class="list-unstyled px-2">
           <li class=""><a href="#" class="text-decoration-none px-3 py-2 d-block"><i class="fas fa-cogs"></i> CONFIGURACION</a></li>
-          <li class=""><a href="#" class="text-decoration-none px-3 py-2 d-block"><i class="fas fa-sign-out-alt"></i> SALIR</a></li>
+          <li class=""><a href="logout.php" class="text-decoration-none px-3 py-2 d-block"><i class="fas fa-sign-out-alt"></i> SALIR</a></li>
         </ul>
       </div>
 
