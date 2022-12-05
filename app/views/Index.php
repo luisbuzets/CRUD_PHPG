@@ -439,11 +439,11 @@ include_once "./seguridad.php";
     <script src="../assets/code.js"></script>
     <script src="../assets/codig.js"></script>
     <script src="JS/axios.min.js"></script>
-
+    <script src="../views/JS/funciones.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../views/JS/alerts.js"></script>
-    <script src="../views/JS/funciones.js"></script>
+
     <script src="https://code.jquery.com/jquery-3.6.1.slim.min.js"
         integrity="sha256-w8CvhFs7iHNVUtnSP0YKEg00p9Ih13rlL9zGqvLdePA=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
