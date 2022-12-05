@@ -253,37 +253,37 @@
           <div class="row">
       
             <div class="col-3">
-              <label id="texto1" for="name">Primer Nombre </label>
+              <label id="texto1" for="primernombre">Primer Nombre </label>
             <input type="text" class="form-control w-28" aria-label="Primer Nombre" aria-describedby="button-addon2">
             </div>
             
             <div class="col-3">
-              <label id="texto1" for="name">Segundo Nombre</label>
+              <label id="texto1" for="segundonombre">Segundo Nombre</label>
             <input type="text" class="form-control w-28"  aria-label="Segund Nombre" aria-describedby="button-addon2">
             </div>
             
             <div class="col-3">
-              <label id="texto1" for="name">Primer Apellido</label>
+              <label id="texto1" for="primerApellido">Primer Apellido</label>
               <input type="text" class="form-control w-28"  aria-label="Primer Apellido" aria-describedby="button-addon2">
             </div>
   
             <div class="col-3">
-              <label id="texto1" for="name">Segundo Apellido</label>
+              <label id="texto1" for="segundoApellido">Segundo Apellido</label>
               <input type="text" class="form-control w-28"  aria-label="Segundo Apellido" aria-describedby="button-addon2">
             </div>
             <div id="filabaja" class="row">
 
               <div class="col-3">
-                <label id="texto1" for="name">Edad</label>
+                <label id="texto1" for="edad">Edad</label>
               <input type="text" class="form-control" style="width: 128px;" placeholder="17-99" aria-label="Edad" aria-describedby="button-addon2">
               </div>
               
               <div  id="identidad" class="col-3">
-                <label id="texto1" for="name">Identidad</label>
+                <label id="texto1" for="Identidad">Identidad</label>
               <input type="text" class="form-control w-28"  placeholder="0801199900401" aria-label="Identidad" aria-describedby="button-addon2">
               </div>
                 <div class ="col-3">
-                  <label id="texto1" for="name">Fecha inicio</label>
+                  <label id="texto1" for="fecharegistro">Fecha inicio</label>
                 <input id="startDate" class="form-control" type="date" />
           
               </div>

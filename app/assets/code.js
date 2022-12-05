@@ -83,10 +83,15 @@ const app = new (function () {
       })
         .then((res) => res.json())
         .then((data) => {
-          this.id.value = data.id;
-          this.nombres.value = data.nombres;
-          this.email.value = data.email;
-          this.edad.value = data.edad;
+          this.id.value               = data.id ;
+          this.primernombre.value     = data.primernombre ;
+          this.segundonombre.value    = data.segundonombre ;
+          this.primerApellido.value   = data.primerApellido ;
+          this.segundoApellido.value  = data.segundoApellido ;
+          this.edad.value             = data.edad ;
+          this.Identidad.value        = data.Identidad ;
+          this.direction.value        = data.direction ;
+          this.fechaRegistro.value    = data.fechaRegistro ;
         })
         .catch((error) => console.log(error));
     };
@@ -105,13 +110,46 @@ const app = new (function () {
         .catch((error) => console.log(error));
     };
     this.limpiar = () => {
-      this.id.value = "";
-      this.nombres.value = "";
-      this.email.value = "";
+      this.primernombre.value = "";
+      this.segundonombre.value = "";
+      this.primerApellido.value = "";
+      this.segundoApellido.value = "";
       this.edad.value = "";
+      this.Identidad.value = "";
+      this.direction.value = "";
+      this.fechaRegistro.value = "";
+    
     };
   })();
   app.listado();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*********************--- CRUD EMPLEADO --****************************/
 
@@ -123,7 +161,7 @@ const apps = new (function () {
     this.primerApellido = document.getElementById("primerApellido");
     this.segundoApellido = document.getElementById("segundoApellido");
     this.edad = document.getElementById("edad");
-    this.fechaRegistro = document.getElementById("fechaRegistro");
+    this.fecha_Registro = document.getElementById("fecharegistro");
 
     this.listado = () => {
         fetch("../control/listados.php")
@@ -148,6 +186,87 @@ const apps = new (function () {
           })
           .catch((error) => console.log(error));
       };
+      this.guardar = () => {
+        var form = new FormData();
+        form.append("primerNombre", this.primernombre.value);
+        form.append("segundoNombre", this.segundonombre.value);
+        form.append("primerApellido", this.primerApellido.value);
+        form.append("segundoApellido", this.segundoApellido.value);
+        form.append("edad", this.edad.value);
+        form.append("Identidad", this.Identidad.value);
+        form.append("direction", this.direction.value);
+        form.append("fecharegistro", this.fechaRegistro.value);
+        if (this.id.value === "") {
+          fetch("../controllers/guardar.php", {
+            method: "POST",
+            body: form,
+          })
+            .then((res) => res.json())
+            .then((data) => {
+              alert("Creado con exito");
+              this.listado();
+              this.limpiar();
+            })
+            .catch((error) => console.log(error));
+        } else {
+          fetch("../controllers/actualizar.php", {
+            method: "POST",
+            body: form,
+          })
+            .then((res) => res.json())
+            .then((data) => {
+              alert("Actualizado con exito");
+              this.listado();
+              this.limpiar();
+            })
+            .catch((error) => console.log(error));
+        }
+      };
+      this.editar = (id) => {
+        var form = new FormData();
+        form.append("id", id);
+        fetch("../controllers/editar.php", {
+          method: "POST",
+          body: form,
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            this.id.value               = data.id ;
+            this.primernombre.value     = data.primernombre ;
+            this.segundonombre.value    = data.segundonombre ;
+            this.primerApellido.value   = data.primerApellido ;
+            this.segundoApellido.value  = data.segundoApellido ;
+            this.edad.value             = data.edad ;
+            this.Identidad.value        = data.Identidad ;
+            this.fecha_Registro.value    = data.fechaRegistro ;
+          })
+          .catch((error) => console.log(error));
+      };
+      this.eliminar = (id) => {
+        var form = new FormData();
+        form.append("id", id);
+        fetch("../controllers/eliminar.php", {
+          method: "POST",
+          body: form,
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            alert("Eliminado con exito");
+            this.listado();
+          })
+          .catch((error) => console.log(error));
+      };
+      this.limpiar = () => {
+        this.primernombre.value = "";
+        this.segundonombre.value = "";
+        this.primerApellido.value = "";
+        this.segundoApellido.value = "";
+        this.edad.value = "";
+        this.fechaRegistro.value = "";
+      };
+
+
+
   })();
 apps.listado();
 
