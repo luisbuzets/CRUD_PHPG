@@ -1,6 +1,6 @@
 <?php
 
-
+include_once "./seguridad.php";
 
 ?>
 <!doctype html>
@@ -18,8 +18,6 @@
 </head>
 
 <body>
-
-
 
 
     <!--   estructura del side       -->
@@ -327,7 +325,7 @@
                                 </div>
                             </div>
                             <div id="button1">
-                                <button type="button" class="btn btn-secondary w-20 " id="btn_guardar">GUARDAR</button>
+                                <button type="button" class="btn btn-secondary w-20 " id="btn_salvar">GUARDAR</button>
                             </div>
 
                         </div>
